@@ -7,7 +7,7 @@ class Node {
 
 export class LinkedList {
     constructor() {
-
+        this.listItem = null;
     }
 
     append(value) {
@@ -19,7 +19,7 @@ export class LinkedList {
     }
 
     size() {
-
+        
     }
 
     head() {
