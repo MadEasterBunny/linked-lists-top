@@ -68,11 +68,27 @@ export class LinkedList {
     }
 
     contains(value) {
-
+        let current = this.headNode;
+        while(current !== null) {
+            if(current.value === value) return true;
+            current = current.nextNode;
+        }
+        return false;
     }
 
     findIndex(value) {
+        let index = 0;
+        let current = this.headNode;
 
+        while(current !== null) {
+            if(current.value === value) {
+                return index;
+            } else {
+                current = current.nextNode;
+                index++;
+            }
+        }
+        return -1;
     }
 
     toString() {
