@@ -50,11 +50,21 @@ export class LinkedList {
     }
 
     at(index) {
+        const currentSize = this.size();
+        if(this.headNode === null || index >= currentSize) return undefined;
+        let current = this.headNode;
 
+        for(let i = 0; i < index; i++) {
+            current = current.nextNode;
+        }
+        return current.value;
     }
 
     pop() {
-
+        if(this.headNode === null) return undefined;
+        const poppedValue = this.headNode.value;
+        this.headNode = this.headNode.nextNode;
+        return poppedValue;
     }
 
     contains(value) {
