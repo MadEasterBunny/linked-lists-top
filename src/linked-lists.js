@@ -36,11 +36,17 @@ export class LinkedList {
     }
 
     head() {
-        
+        return this.headNode;
     }
 
     tail() {
+        if(!this.headNode) return null;
 
+        let tail = this.headNode;
+        while(tail.nextNode) {
+            tail = tail.nextNode;
+        }
+        return tail;
     }
 
     at(index) {
