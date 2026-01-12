@@ -92,10 +92,14 @@ export class LinkedList {
     }
 
     toString() {
+        let listString = "";
+        let current = this.headNode;
 
-    }
-
-    insertAt(index, ...values) {
-        
+        while(current !== null) {
+            listString += `( ${current.value} ) -> `;
+            current = current.nextNode;
+        }
+        listString += "null";
+        return listString;
     }
 }
