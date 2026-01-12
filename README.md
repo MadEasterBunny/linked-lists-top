@@ -1,3 +1,3 @@
-# webpack-template-top
+# linked-lists-top
 
-A template for sites created using webpack through The Odin Project
+Linked lists project made through The Odin Project
